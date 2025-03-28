@@ -16,8 +16,8 @@ slideshow for use inside UNW.
 
 ## Contributing
 
-- Create files in your route (for example, `./src/app/breyon`) that adhere to
-  [university
+- Create files in your route (for example, `./src/app/students/breyon-gunn`)
+  that adhere to [university
   policies](https://www.unwsp.edu/about-us/christian-values/declaration-of-christian-community/).
 - Collaborate with others on the main pages with permission (e.g.
   `./src/app/page.tsx`)
@@ -26,8 +26,8 @@ slideshow for use inside UNW.
 ### Getting Started
 
 - Learn [React](https://react.dev)
-- Create your very own directory in `./src/app/your-name`
-- Create a `./src/app/your-name/page.tsx`
+- Create your very own directory in `./src/app/students/your-name`
+- Create a `./src/app/students/your-name/page.tsx`
 - Input this code:
 
 ```tsx
@@ -48,7 +48,7 @@ To learn how to create your own page, take a look at the following resources:
 - [Next.js documentation](https://nextjs.org/docs): For questions like "where
   do I put my files?" or "how do I create a dynamic webpage?" However, you
   shouldn't have to go here much.
-  - [Where do I put my
+  - [Where do I put
     files?](https://nextjs.org/docs/app/getting-started/layouts-and-pages)
   - [How do I access an API endpoint
     server-side?](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching)
@@ -56,11 +56,11 @@ To learn how to create your own page, take a look at the following resources:
   important one. Go here to learn the basics of how to make a webpage in our
   app.
   - [Tutorial](https://react.dev/reference/react)
-- [Motion documentation](https://motion.dev/docs/react-quick-start): look here
-  to figure out how to do animations.
 - [Tailwind CSS
   documentation](https://tailwindcss.com/docs/styling-with-utility-classes):
   Look here for information on how to use Tailwind CSS.
+- [Motion documentation](https://motion.dev/docs/react-quick-start): look here
+  to figure out how to do animations.
 
 ### Development Server
 
@@ -76,14 +76,11 @@ npm run dev
 #### Where do I put my files?
 
 If you are making your own page, create a file under
-`src/app/your-name/page.tsx`. For example, my name is Austin, so I should put
-my page at `src/app/austin/page.tsx`. To go to your page in the [development
-server](#development-server), navigate to `http://localhost:3000/your-name`.
+`src/app/students/your-name/page.tsx`. For example, my name is Austin Long, so
+I should put my page at `src/app/students/austin-long/page.tsx`. To go to your
+page in the [development server](#development-server), navigate to
+`http://localhost:3000/students/your-name`.
 
 #### How do I create images?
-
-TODO
-
-### Where do I import from?
 
 TODO
