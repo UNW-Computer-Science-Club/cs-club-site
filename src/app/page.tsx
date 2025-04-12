@@ -1,5 +1,33 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { Organization } from "schema-dts";
+import { JsonLd } from "react-schemaorg";
+
+const clubDescription =
+  "We are dedicated to fostering a community of innovation and" +
+  " collaboration in computer science. We aim to empower students of all" +
+  " skill levels through collaborative projects and mentorship while" +
+  " promoting the development of technical skills and critical thinking." +
+  " Our goal is to inspire and prepare members for future leadership in technology.";
+
+function JsonLdMetadata() {
+  return (
+    <JsonLd<Organization>
+      item={{
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        name: "University of Northwestern - St. Paul - Computer Science Club",
+        url: "https://unwcsclub.dev",
+        description: clubDescription,
+        parentOrganization: {
+          "@type": "CollegeOrUniversity",
+          name: "University of Northwestern - St. Paul",
+          url: "https://www.unwsp.edu",
+        },
+      }}
+    />
+  );
+}
 
 export const metadata: Metadata = {
   title: "Home - UNW CS Club",
@@ -28,14 +56,7 @@ export default function Home() {
         We are the Computer Science Club at the University of Northwestern-St.
         Paul in Roseville, Minnesota.
       </p>
-      <p className="pb-5 text-center text-2xl">
-        We are dedicated to fostering a community of innovation and
-        collaboration in computer science. We aim to empower students of all
-        skill levels through collaborative projects and mentorship while
-        promoting the development of technical skills and critical thinking. Our
-        goal is to inspire and prepare members for future leadership in
-        technology.
-      </p>
+      <p className="pb-5 text-center text-2xl">{clubDescription}</p>
       <h2 className="pt-10 text-center text-4xl">Our Club Members</h2>
       <div className="flex items-center justify-center pt-5">
         <Image
@@ -46,6 +67,7 @@ export default function Home() {
           alt="Our Club Members"
         />
       </div>
+      <JsonLdMetadata />
     </div>
   );
 }
