@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   const linkStyles =
-    "hover:text-white hover:font-bold transition-colors duration-300 ease-in-out"
+    "hover:text-white hover:font-bold transition-colors duration-300 ease-in-out";
 
   return (
     <footer className="flex w-full flex-col items-center justify-center border-t border-gray-500 px-4 pt-10">
