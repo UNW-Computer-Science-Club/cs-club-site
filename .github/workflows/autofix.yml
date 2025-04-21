@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   fix-warnings:
-    if: ${{ !contains(github.event.head_commit.commit_message, '[auto-commit]') }}
+    if: ${{ !contains(github.event.head_commit.commit_message, '[skip autofix]') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
