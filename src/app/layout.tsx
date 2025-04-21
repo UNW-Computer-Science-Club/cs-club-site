@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "This is the official site of University of Northwestern " +
     "- St.Paul's very own Computer Science Club.",
   metadataBase: new URL("https://unwcsclub.dev"),
-};
+}
 
 export default function RootLayout({
   children,
