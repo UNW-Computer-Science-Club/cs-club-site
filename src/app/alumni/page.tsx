@@ -10,30 +10,37 @@ export const metadata: Metadata = {
     "- St.Paul's very own Computer Science Club.",
 };
 
-export default function Alumni() {
-  const paragraphStyle = "text-3xl text-center";
+const students = [{ id: "breyon-gunn", name: "Breyon Gunn" }];
 
+export default function Alumni() {
   return (
-    <div className="flex flex-col items-center justify-center gap-5 pt-20 md:pt-30">
-      <p className={paragraphStyle}>
-        There are currently no active alumni pages.
-      </p>
-      <p className={paragraphStyle}>
-        Check back in Summer 2025 to see the most recent Alumni.
-      </p>
-      <Link
-        href="/students"
-        className="text-center text-2xl underline decoration-[#d0623b]"
-      >
-        Instead, check out our current students!
-      </Link>
-      <Image
-        src={CSCLogo}
-        alt="CSC Logo"
-        width={800}
-        height={600}
-        className="mt-10"
-      />
+    <div className="flex flex-col gap-5 pt-5">
+      <h1 className="pt-10 text-5xl font-extrabold">Alumni List</h1>
+      <ul className="pt-5 text-2xl text-gray-300">
+        {students.map((student) => (
+          <li
+            className="transition-colors duration-500 ease-in-out hover:font-bold hover:text-white"
+            key={student.id}
+          >
+            <Link href={`/students/${student.id}`}>{student.name}</Link>
+          </li>
+        ))}
+      </ul>
+      <div className="flex flex-col items-center justify-center">
+        <Link
+          href="/students"
+          className="mt-15 text-2xl underline decoration-[#d0623b]"
+        >
+          Check out our current students!
+        </Link>
+        <Image
+          src={CSCLogo}
+          alt="CSC Logo"
+          width={800}
+          height={600}
+          className=""
+        />
+      </div>
     </div>
   );
 }
