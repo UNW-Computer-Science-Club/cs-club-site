@@ -45,12 +45,12 @@ export default function Page() {
         <p className="mt-2 text-sm text-gray-400">– Andrew, probably</p>
       </div>
 
-      <section className="mb-6">
+      <section className="mb-6 rounded-lg border-4 border-amber-600 bg-gray-800 p-4 transition-transform duration-300 ease-in-out hover:scale-110">
         <Link
           href="https://www.youtube.com/watch?v=C12rXla0uuo&pp=ygUOY2xvbmUgd2FycyBzZm0%3D"
           className="block text-center text-blue-500 hover:underline"
         >
-          Click text for a funny video I enjoy
+          Click Here for a funny video I enjoy
         </Link>
         <p className="mt-4 text-center">
           Here are some projects I&apos;m working on:
@@ -63,8 +63,8 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="border-tan rounded-lg border-4 bg-gray-800 p-4">
-        <p className="mb-4 text-center text-lg font-bold">
+      <section className="rounded-lg border-4 border-amber-600 bg-gray-800 p-4">
+        <p className="mb-4 text-center text-lg font-bold text-blue-400">
           Im not just a software engineer, I also have a life outside of coding!
           I enjoy a varity of things that I feel like sharing with you!
         </p>
@@ -75,10 +75,27 @@ export default function Page() {
               I am a fan of the following games:
             </p>
             <ul className="list-inside list-disc pl-6">
+              <div className="flex gap-2">
+                <Image
+                  src="/images/andrew/Fallout4.jpg"
+                  alt="Fallout 4 Logo"
+                  width={40}
+                  height={40}
+                  className="transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+                <Image
+                  src="/images/andrew/minecraft2.jpg"
+                  alt="Minecraft Logo"
+                  width={40}
+                  height={40}
+                  className="transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+              </div>
               <li>Fallout 4</li>
               <li>Minecraft</li>
               <li>Slay the Princess</li>
               <li>Hollow Knight</li>
+              <li>Terria</li>
             </ul>
           </div>
           {/* Shows Section */}
