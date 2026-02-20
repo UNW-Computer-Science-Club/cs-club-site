@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: mixed-line-ending
+      - id: check-symlinks
+      - id: check-merge-conflict
+      - id: detect-private-key
+  - repo: local
+    hooks:
+      - id: eslint
+        name: lint
+        entry: npm run lint:fix-file
+        language: system
+        files: \.(js|jsx|ts|tsx)$
+      - id: prettier
+        name: formatting
+        entry: npm run prettier:fix-file
+        language: system
+        files: \.(js|jsx|ts|tsx)$
