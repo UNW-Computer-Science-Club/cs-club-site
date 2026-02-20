@@ -13,8 +13,10 @@
     "lint": "eslint --max-warnings=0 .",
     "prettier:check": "prettier . --check",
     "prettier:fix": "prettier . --write",
+    "prettier:fix-file": "prettier --write",
+    "lint:fix-file": "eslint --fix --max-warnings=0",
     "lint:fix": "eslint --fix .",
-    "postinstall": "npm run cf-typegen"
+    "postinstall": "npm run cf-typegen && prek install"
   },
   "dependencies": {
     "highlight.js": "^11.11.1",
@@ -35,6 +37,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@j178/prek": "^0.3.3",
     "@tailwindcss/postcss": "^4.0.14",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "20.17.30",
